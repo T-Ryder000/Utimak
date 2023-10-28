@@ -5,6 +5,7 @@
   font-family: 'Libre Franklin', sans-serif;
   border: none;
   outline: 0;
+  user-select: none;
 }
 html, body{
   width: 100%;
@@ -28,11 +29,11 @@ header{
   justify-content: space-around;
   align-items: center;
   position: fixed;
-  z-index: 1;
   box-shadow: 0px 1px 4px 0px rgba(82, 82, 82, 0.13);
   border-bottom: 3px solid rgba(139, 0, 0, 0.514);
   width: 100%;
   flex-wrap: wrap;
+  z-index: 7;
 }
 .logo{
   width: 15%;
@@ -115,7 +116,6 @@ header{
   top: 100px;
   left: 150px;
   position: absolute;
-  z-index: 1;
   font-size: 5rem;
   font-weight: bold;
   color: white;
@@ -132,7 +132,8 @@ header{
   .welcome p{
       font-size: 2.5rem;
       left: 30px;
-      top: 130px;
+      top:50%;
+      padding: 10px;
     }
   .welcome:hover{
       opacity: 1.0;}
@@ -143,7 +144,7 @@ header{
 
 
 .categoria-itens{
-  margin-top: 70px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -192,4 +193,62 @@ header{
   .header-navigation{
     gap: 5px;
   }
+}
+
+/*----------------------------------------------------------------------------------------------*/
+.main-top{
+  margin-top: 30px;
+  height: 25rem;
+  width: 100%;
+ display: flex;
+ align-items: center;
+ background-color: #e9eaf0;
+}
+.main-slide{
+  position: relative;
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  overflow: hidden;
+}
+.slide-images{
+  display: flex;
+  height: 100%;
+  
+}
+.item{
+  height: 100%;
+  transition: all 1.0s;
+  margin: 0 50px;
+  border-radius: 20px;
+}
+.item:first-child{
+  margin-left: -1210px;
+}
+.item:last-child{
+  margin-right: 70px;
+}
+.item img{
+  height: 100%;
+  border-radius: 20px;
+}
+.botoes{
+  position: absolute;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  margin: 0 50px;
+  background-color: white;
+  border-radius: 50%;
+  transition: all 1s;
+  cursor: pointer;
+
+}
+#button1{
+  left: 0;
+}
+#button2{
+  right: 0;
 }
