@@ -73,7 +73,7 @@ header{
   width: 20%;
 }
 .nav-client{
-  width: 2.5rem;
+  width: 2rem;
 }
 .nav-client:hover{
   transform: scale(1.1);
@@ -97,17 +97,18 @@ header{
   height: 50%;
   overflow: hidden;
   position: relative;
-  background-color:#0801ef;
   display: flex;
   justify-content: end;
   align-items: center;
+  background-image: url(./Main/Main1/welcome.jpg);
+  background-size: cover;
 }
 .welcome:hover{
   opacity: 0.9;
   cursor: pointer;
 }
 .welcome i{
-  color:white;
+  color:darkred;
   font-size: 200px;
   margin-right: 200px;
   margin-top: 70px;
@@ -116,13 +117,25 @@ header{
   top: 100px;
   left: 150px;
   position: absolute;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: bold;
   color: white;
+  background-color: darkred;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.sombra{
+  background-color: black;
+  height: 10px;
+  box-shadow: 7px -1000px 10px black;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 @media screen and (max-width: 600px){
   .welcome{
-    height: 35%;
+    height: 38%;
   }
   .welcome i{
     font-size: 80px;
@@ -131,7 +144,7 @@ header{
   }
   .welcome p{
       font-size: 2.5rem;
-      left: 30px;
+      left: 15px;
       top:50%;
       padding: 10px;
     }
@@ -198,16 +211,17 @@ header{
 /*----------------------------------------------------------------------------------------------*/
 .main-top{
   margin-top: 30px;
-  height: 25rem;
+  height: 30rem;
   width: 100%;
  display: flex;
  align-items: center;
+ justify-content: end;
  background-color: #e9eaf0;
 }
 .main-slide{
   position: relative;
-  height: 80%;
-  width: 100%;
+  height: 90%;
+  width: 40%;
   display: flex;
   justify-content: baseline;
   align-items: center;
@@ -216,30 +230,32 @@ header{
 .slide-images{
   display: flex;
   height: 100%;
-  
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 .item{
+  display: flex;
+  justify-content: center;
+  background-color:#074d88;
+  width: 90vw;
   height: 100%;
-  transition: all 1.0s;
+  transition: all 0.7s ease-in-out;
   margin: 0 50px;
   border-radius: 20px;
 }
 .item:first-child{
-  margin-left: -1210px;
-}
-.item:last-child{
-  margin-right: 70px;
+
 }
 .item img{
   height: 100%;
-  border-radius: 20px;
 }
 .botoes{
   position: absolute;
-  font-size: 50px;
+  font-size: 40px;
   display: flex;
   align-items: center;
-  margin: 0 50px;
+  margin: 0 30px;
   background-color: white;
   border-radius: 50%;
   transition: all 1s;
@@ -251,4 +267,19 @@ header{
 }
 #button2{
   right: 0;
+}
+
+@media screen and (max-width: 600px){
+  .main-top{
+    justify-content: center;
+    height: 20rem;
+  }
+  .main-slide{
+    width: 100%};
+  .botoes{
+    margin: 0;}
+  .item{
+    width: 80vw;
+    height: 80vw;
+  }
 }
