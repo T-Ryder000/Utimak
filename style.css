@@ -33,7 +33,7 @@ header{
   border-bottom: 3px solid rgba(139, 0, 0, 0.514);
   width: 100%;
   flex-wrap: wrap;
-  z-index: 7;
+  z-index: 999;
 }
 .logo{
   width: 15%;
@@ -126,9 +126,8 @@ header{
 }
 
 .sombra{
-  background-color: black;
-  height: 10px;
-  box-shadow: 7px -1000px 10px black;
+  background:linear-gradient(to top, #000, transparent);
+  height: 50px;
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -245,7 +244,7 @@ header{
   border-radius: 20px;
 }
 .item:first-child{
-
+ background-color: #e9eaf0;
 }
 .item img{
   height: 100%;
