@@ -172,15 +172,9 @@ header{
   display: flex;
   margin-top: 40px;
   z-index: 1;
-  gap: 20px;
+  gap: 25px;
   flex-wrap: wrap;
   justify-content: center;
-}
-.header-list{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
 }
 .CategoriaText{
   width: 120px;
@@ -192,15 +186,13 @@ header{
   color: white;
   border-radius: 5px;
   cursor: pointer;
+  box-shadow: 5px 5px 10px rgb(100, 99, 99);
+  transition: 0.1s;
 }
 .CategoriaText:hover{
   opacity: 0.8;
   transform: scale(1.1);
  }
-.categoriaIcons{
-  width: 100%;
-  cursor: pointer;
-}
 @media screen and (max-width: 600px){
   .header-navigation{
     gap: 5px;
@@ -210,77 +202,92 @@ header{
 
 
 /*----------------------------------------------------------------------------------------------*/
-.main-top{
-  margin-top: 30px;
-  height: 30rem;
-  width: 100%;
- display: flex;
- align-items: center;
- justify-content: end;
- background-color: #e9eaf0;
+@keyframes animacao {
+  0% { margin-left: 0; }
+  20% { margin-left: 0; }
+  25% { margin-left: -100%; }
+  45% { margin-left: -100%; }
+  50% { margin-left: -200%; }
+  70% { margin-left: -200%; }
+  75% { margin-left: -300%; }
+  95% { margin-left: -300%; }
+  100% { margin-left: -400%; }
 }
-.main-slide{
-  position: relative;
-  height: 90%;
-  width: 40%;
+.slide-top{
+  margin-top: 40px;
+  width: 100%;
+  background-color: #e9eaf0;
   display: flex;
-  justify-content: baseline;
   align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+}
+.slide-anuncios {
+  width: 640px;
+  height: 250px;
+  overflow: hidden;
+  border: 2px solid black;
+}
+.anuncios {
+  display: flex;
+  align-items: center;
+  height:100%;
+  width: 500%;
+  animation-name: animacao;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+.anuncios img {
+  height: 100%;
+  width: 20%;
+  object-fit: contain;
+  background-color: #074d88;
+}
+@media screen and (max-width: 600px){
+  .slide-anuncios {
+    width: 95vw;
+    height: 45vw;}
+}
+
+/***********************************/
+.slide-ofertas{
+  height: 90%;
+  width: 20%;
+  border: 2px solid black;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.img-ofertas{
+  height: 100%;
+  width: 100%;
+  display: flex;
   overflow: hidden;
 }
-.slide-images{
-  display: flex;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
+.img-ofertas img{
   width: 100%;
-}
-.item{
-  display: flex;
-  justify-content: center;
-  background-color:#074d88;
-  width: 90vw;
   height: 100%;
-  transition: all 0.7s ease-in-out;
-  margin: 0 50px;
-  border-radius: 20px;
+  transition: 1s;
 }
-.item:first-child{
- background-color: #e9eaf0;
+.img-ofertas img:first-child{
+  margin-left: -100%;
 }
-.item img{
-  height: 100%;
-}
-.botoes{
+.btn{
   position: absolute;
-  font-size: 40px;
-  display: flex;
-  align-items: center;
-  margin: 0 30px;
-  background-color: white;
-  border-radius: 50%;
-  transition: all 1s;
-  cursor: pointer;
-
+  font-size: 30px;
 }
-#button1{
-  left: 0;
+#prev{
+  left: -20px;
 }
-#button2{
-  right: 0;
+#next{
+  right: -20px;
 }
 
 @media screen and (max-width: 600px){
-  .main-top{
-    justify-content: center;
-    height: 20rem;
-  }
-  .main-slide{
-    width: 100%};
-  .botoes{
-    margin: 0;}
-  .item{
-    width: 80vw;
-    height: 80vw;
+  .slide-ofertas{
+    height: 80%;
+    width: 65%;
   }
 }
