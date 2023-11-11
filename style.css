@@ -421,6 +421,11 @@ header{
   .header-navigation{
     gap: 5px;
   }
+  .CategoriaText{
+    width: 200px;
+    height: 100px;
+  }
+
 }
 
 
