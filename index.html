@@ -6,9 +6,10 @@
   <title>Utimak</title>
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./fontawesome/css/all.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200;300;400;500;600;700;800;900&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -18,9 +19,7 @@
       <i id="pesquisar" class="fa-solid fa-magnifying-glass"></i>
       </div>
       <ul class="nav">
-        <li><a href="/"><img class="nav-client" src="./Header/Cart-header.png" alt="Carrinho de Compras"></a></li>
-        <li><a href="/"><img class="nav-client" src="./Header/Atendimento-header.png" alt="Atendimento"></a></li>
-        <li><a href="/"><img class="nav-client" src="./Header/Perfil-header.png" alt="Login"></a></li>
+        <li><span>Atendimento</span><a href="/"><img class="nav-client" src="./Header/Atendimento-header.png" alt="Atendimento"></a></li>
       </ul>
   </header>
 
@@ -31,15 +30,65 @@
       <div class="sombra"></div>
     </div>
 
+    
+    <div class="catalogo">
+      <h1>As melhores ofertas:</h1>
+      <div class="wrapper">
+        <i id="left" class="fa-solid fa-angle-left"><</i>
+        <ul class="carousel">
+          <li class="card">
+            <div class="img"><img src="./catalogo principal/prod1.png" alt="img" draggable="false"></div>
+            <h2>Balde de roupa</h2>
+            <span>R$ 30,00/un</span>
+            <button>ADQUIRA AGORA</button>
+          </li>
+          <li class="card">
+            <div class="img"><img src="./catalogo principal/prod2.jpg" alt="img" draggable="false"></div>
+            <h2>PLanta coqueiro</h2>
+            <span>R$ 20,00/un</span>
+            <button>ADQUIRA AGORA</button>
+          </li>
+          <li class="card">
+            <div class="img"><img src="./catalogo principal/prod3.jpg" alt="img" draggable="false"></div>
+            <h2>Bule de café</h2>
+            <span>R$ 40,00/un</span>
+            <button>ADQUIRA AGORA</button>
+          </li>
+          <li class="card">
+            <div class="img"><img src="./catalogo principal/prod4.png" alt="img" draggable="false"></div>
+            <h2>James Khosravi</h2>
+            <span>Freelancer</span>
+            <button>ADQUIRA AGORA</button>
+          </li>
+          <li class="card">
+            <div class="img"><img src="./catalogo principal/prod5.jpg" alt="img" draggable="false"></div>
+            <h2>Kristina Zasiadko</h2>
+            <span>Bank Manager</span>
+            <button>ADQUIRA AGORA</button>
+          </li>
+          <li class="card">
+            <div class="img"><img src="./catalogo principal/prod6.jpg" alt="img" draggable="false"></div>
+            <h2>Donald Horton</h2>
+            <span>App Designer</span>
+            <button>ADQUIRA AGORA</button>
+          </li>
+        </ul>
+        <i id="right" class="fa-solid fa-angle-right">></i>
+      </div>
+    </div>
+
     <div class="categoria-itens">
-      <p class="name-catalogo">Categoria de itens:</p>
+      <p class="name-catalogo">Veja nossos produtos por categoria!</p>
+      <img src="" alt="">
       <nav class="header-navigation">
-        <a href="/"><li class="CategoriaText">Máquinas</li></a>
-        <a href="/"><li class="CategoriaText">Limpeza</li></a>
-        <a href="/"><li class="CategoriaText">Brinquedos</li></a>
-        <a href="/"><li class="CategoriaText">Festa</li></a>
-        <a href="/"><li class="CategoriaText">Cozinha</li></a>
-        <a href="/"><li class="CategoriaText">Embalagens</li></a>
+        <a class="CategoriaText" href="/"><li >Máquinas</li></a>
+        <a class="CategoriaText" href="/"><li >Ferramentas</li></a>
+        <a class="CategoriaText" href="/"><li >Limpeza</li></a>
+        <a class="CategoriaText" href="/"><li >Brinquedos</li></a>
+        <a class="CategoriaText" href="/"><li >Plantas</li></a>
+        <a class="CategoriaText" href="/"><li >Festa</li></a>
+        <a class="CategoriaText" href="/"><li >Cozinha</li></a>
+        <a class="CategoriaText" href="/"><li >Embalagens</li></a>
       </nav>
     </div>
   
@@ -71,7 +120,124 @@
 
     </div>
 
+    <div class="wrapper2">
+      <div class="slide-wrapper">
+        <button class="button-arrows previus"><</button>
+        <button class="button-arrows next">></button>
+        <div class="slide-list">
+
+          <!--produto 1-->
+          <div class="slide-item">
+            <div class="slide-content">
+              <img src="./catalogo2/Caixa Organizadora.jpg" alt="Caixa Organizadora">
+              <div class="slide-description">
+                <h3>Caixa Organizadora</h3>
+                <span>20,00</span>
+                <button>ADQUIRA</button>
+              </div>
+            </div>
+          </div>
+
+          <!--produto 2-->
+          <div class="slide-item">
+            <div class="slide-content">
+              <img src="./catalogo2/Conjunto de Tigelas.jpg" alt="Conjunto de Tigelas">
+              <div class="slide-description">
+                <h3>Conjunto de Tigelas</h3>
+                <span>40,00</span>
+                <button>ADQUIRA</button>
+              </div>
+            </div>
+          </div>
+
+          <!--produto 3-->
+          <div class="slide-item">
+            <div class="slide-content">
+              <img src="./catalogo2/Cuscuzeira Tramontina .jpg" alt="Cuscuzeira Tramontina">
+              <div class="slide-description">
+                <h3>Cuscuzeira</h3>
+                <span>25,00</span>
+                <button>ADQUIRA</button>
+              </div>
+            </div>
+          </div>
+
+          <!--produto 4-->
+          <div class="slide-item">
+            <div class="slide-content">
+              <img src="./catalogo2/Jogo De Pratos.jpg" alt="Jogo De Pratos">
+              <div class="slide-description">
+                <h3>Jogo De Pratos</h3>
+                <span>60,00</span>
+                <button>ADQUIRA</button>
+              </div>
+            </div>
+          </div>
+
+          <!--produto 5-->
+          <div class="slide-item">
+            <div class="slide-content">
+              <img src="./catalogo2/Ralador de Aluminio.jpg" alt="Ralador de Aluminio">
+              <div class="slide-description">
+                <h3>Ralador de Aluminio</h3>
+                <span>15,00</span>
+                <button>ADQUIRA</button>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="slide-controls">
+          <input class="buttons-controls but1" type="button">
+          <input class="buttons-controls but2" type="button">
+          <input class="buttons-controls but3" type="button">
+          <input class="buttons-controls but4" type="button">
+          <input class="buttons-controls but5" type="button">
+        </div>
+      </div>
+    </div>
+
   </main>
+
+  <footer>
+    <img class="logo-final" src="./Header/logo.jpg">
+    
+    <hr width="80%"> 
+
+    <div class="sub-footer">
+     <div>
+      <p>Loja de conveniência</p>
+      <p>Utilidades para a sua vida!</p>
+     </div>
+
+     <ul>
+        <li><b>Horário de atendimento:</b></li>
+        <li>De Segunda a Sexta das 8h às 19h;</li>
+        <li>Sábado das 7h às 19h</li></ul>
+     </ul>
+
+     <div class="redes">
+      <a href='/'><i class="fa-brands fa-square-instagram"></i></a>
+      <a href='/'><i class="fa-brands fa-square-facebook"></i></a>
+      <a href='/'><i class="fa-brands fa-square-whatsapp"></i></a>
+     </div>
+     
+     <div class='Contato-local'>
+      <p><b>Telefone:</b><br><a href="https://l.instagram.com/?u=https%3A%2F%2Fwa.me%2F5575981531713&e=AT0ZBo1Tbfebl169lrJAb64bf5DHBVGmB9iacoSL5YM2sAHc5UxzvcFsi62cQJIaOh17l3AcO3Pcy1m9hTtvE6ZaLw_wE5wUWGi52A">+55 (75)98153-1713</a></p>
+      <p><b>Endereço: </b><br> Praça Miguel carneiro nº 415/Serrinha-BA</p>
+     </div>
+
+    </div>
+
+    <Hr width="50%">
+
+    <div class="final-credits">
+    <p>Copyright ©2023 Todos os direitos reservados | Este modelo foi feito por T-Ryder</p>
+    </div>
+
+  </footer>
 
   <script src="./script.js"></script>
 </body>
