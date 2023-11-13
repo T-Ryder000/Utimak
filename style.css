@@ -20,8 +20,6 @@ li, a{
 /*------------------------------------------------------------------------------------------*/
 
 
-
-
 header{
   display: flex;
   background-color: white;
@@ -29,7 +27,7 @@ header{
   align-items: center;
   position: fixed;
   box-shadow: 0px 1px 4px 0px rgba(82, 82, 82, 0.13);
-  border-bottom: 3px solid rgba(139, 0, 0, 0.514);
+  border-bottom: 3px solid #0043ED;
   width: 100%;
   flex-wrap: wrap;
   z-index: 999;
@@ -98,56 +96,59 @@ header{
 }
 
 
-
 /*---------------------------------------------------------------------------------------------------*/
 
-
-
+.top-main{
+  width: 100%;
+  height: 30vw;
+  background-image: url(./Main/Main1/welcome.jpg);
+  background-size: cover;
+}
 
 .welcome{
   width: 100%;
-  height: 30vw;
+  height: 100%;
   overflow: hidden;
   position: relative;
   display: flex;
   justify-content: end;
   align-items: center;
-  background-image: url(./Main/Main1/welcome.jpg);
-  background-size: cover;
+  background-color: rgba(128, 128, 128, 0.473);
 }
 .welcome:hover{
   opacity: 0.9;
   cursor: pointer;
 }
 .welcome i{
-  color:darkred;
+  color: white;
   font-size: 200px;
   margin-right: 200px;
   margin-top: 70px;
+  z-index: 1;
 }
 .welcome p{
   top: 100px;
   left: 150px;
   position: absolute;
-  font-size: 4rem;
+  font-size: 6rem;
   font-weight: bold;
-  color: white;
-  background-color: darkred;
+  color:white;
   padding: 20px;
   margin: 5px;
   border-radius: 20px;
+  z-index: 1;
 }
 
 .sombra{
   background:linear-gradient(to top, #000, transparent);
-  height: 50px;
+  height: 200px;
   width: 100%;
   position: absolute;
   bottom: 0;
 }
 @media screen and (max-width: 600px){
-  .welcome{
-    height:100vw;
+  .top-main{
+    height:70vw;
   }
   .welcome i{
     font-size: 80px;
@@ -279,7 +280,7 @@ header{
 .carousel .card button{
   font-weight: 600;
   padding: 10px;
-  background-color: darkred;
+  background-color: #0043ED;
   border: 1px solid gray;
   border-radius: 5px;
   height: 50px;
@@ -299,10 +300,14 @@ header{
 }
 
 @media screen and (max-width: 900px) {
+  .catalogo h1{
+    padding-top: 40px;}
   .wrapper .carousel {
-    grid-auto-columns: calc((100% / 2) - 9px);
+    grid-auto-columns: calc((100% / 3) + 40px);
+  }
     .carousel .card {
       scroll-snap-align: start;
+      width: 90%;
       height: 342px;
       list-style: none;
       background: #fff;
@@ -312,7 +317,7 @@ header{
       border-radius: 8px;
     }
     .carousel .card .img {
-      height: 148px;
+      height: 100px;
       width: 148px;
     }
     .card .img img {
@@ -331,15 +336,17 @@ header{
       font-size: 1.31rem;
     }
   }
-}
+
 @media screen and (max-width: 600px) {
+  .catalogo h1{
+    padding-top: 40px;}
   .wrapper .carousel {
-    grid-auto-columns: 100%;
+    grid-auto-columns: calc((100% / 2) + 80px);
   }
   .carousel .card {
-    scroll-snap-align: start;
-    width: 100%;
-    height: 342px;
+    scroll-snap-align: center;
+    width: 90%;
+    height: 300px;
     list-style: none;
     background: #fff;
     cursor: pointer;
@@ -405,7 +412,7 @@ header{
   font-size: 18px;
   text-align: center;
   font-weight: 500;
-  background-color: darkred;
+  background-color: #0043ED;
   padding: 10px;
   color: white;
   border-radius: 5px;
@@ -418,8 +425,12 @@ header{
   transform: scale(1.1);
  }
 @media screen and (max-width: 600px){
+  .categoria-itens{
+    margin-top: 60px;
+    gap: 20px;}
   .header-navigation{
     gap: 5px;
+    margin-top: 0px;
   }
   .CategoriaText{
     width: 200px;
@@ -449,7 +460,7 @@ header{
 .slide-top{
   margin-top: 70px;
   width: 100%;
-  background-color: #e9eaf0;
+  background-color: #0043ED;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -553,7 +564,7 @@ header{
 
 .slide-item{
   flex-shrink: 0;
-  width: 30%;
+  width: 20%;
   height: 25vw;
   padding: 10px;
   box-shadow:4px 4px 12px rgb(109, 109, 109) ;
@@ -581,14 +592,14 @@ header{
 .slide-description button{
   padding: 10px;
   font-size: 20px;
-  background-color: darkred;
+  background-color: #0043ED;
   border-radius: 5px;
   border: 1px solid gray;
   color: white;
   font-weight: 600;
 }
 .button-arrows{
-  background-color: darkred;
+  background-color: #0043ED;
   color: white;
   border-radius: 50%;
   border: none;
@@ -620,15 +631,60 @@ header{
   cursor: pointer;
 }
 .buttons-controls.but1{
-  background-color: darkred;
+  background-color: #0043ED;
 }
 
+@media screen and (max-width: 600px){
+  
+.slide-list{
+  gap: 10px;
+}
+.slide-item{
+  width: 50%;
+  height:70%;
+  padding: 10px;
+}
+.slide-description{
+  gap: 5px;
+  padding: 5px;
+  font-size: 15px;
+}
+.slide-description span{
+  font-size: 20px;
+}
+.slide-description button{
+  padding: 5px;
+  font-weight: 500;
+}
+.button-arrows{
+  width: 35px;
+  height: 35px;
+}
+.slide-controls{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 25px;
+  padding: 0;
+}
+}
+
+
 /*********************************************************************************************************/
-
-
+.divisor{
+  height: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.divisor hr{
+  background-color: #0043ED;
+  height: 5px;
+  width: 90%;
+}
 footer{
   font-weight: 500;
-  margin-top: 70px;
+  margin-top: 50px;
   color: rgb(48, 48, 48);
   height: 60vh;
   display: flex;
@@ -652,7 +708,6 @@ footer a{
 .logo-final{
   width: 30%;
 }
-
 .redes a i{
    font-size: 35px;
    cursor: pointer;
@@ -663,8 +718,6 @@ footer a{
 .Contato-local p{
    padding: 10px 0;
 }
-
-
 .final-credits{
   margin-top: 40px;
   padding: 10px;
@@ -672,14 +725,18 @@ footer a{
   font-weight: 700;
   font-size: 12px;
   width: 100%;
-  background-color: #ffffff;
 }
 
 
 
 @media screen and (max-width: 600px){
   .sub-footer{
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
+  }
+
+  .logo-final{
+    width: 60%;
   }
 }
