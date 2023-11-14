@@ -75,24 +75,36 @@ carousel.addEventListener("scroll", infiniteScroll);
 wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 wrapper.addEventListener("mouseleave", autoPlay);
 /**********************************************************************************/
-let prev = document.getElementById('next')
-let nex = document.getElementById('prev')
 
-let containerItems = document.querySelector('.img-ofertas')
-console.log(containerItems)
 
-prev.addEventListener('click', previous)
-nex.addEventListener('click', next)
 
-function previous(){
-  let ofertas = document.querySelectorAll('.img-ofertas img');
-  containerItems.appendChild(ofertas[0]);
-}
+const Categorias = document.querySelector('.nav-categoria')
 
-function next(){
-  let ofertas = document.querySelectorAll('.img-ofertas img');
-  const lastItem = ofertas[ofertas.length - 1];
-  containerItems.insertBefore( lastItem, ofertas[0] );
-}
+let pressed = false
+let startXX = 0
 
+Categorias.addEventListener('mousedown', function (e) {
+  pressed = true
+  startXX = e.clientX
+  this.style.cursor = 'grabbing'
+
+})
+
+Categorias.addEventListener('mouseleave', function (e) {
+  pressed = false
+})
+
+window.addEventListener('mouseup', function (e) {
+  pressed = false
+  wrapper.style.cursor = 'grab'
+})
+
+Categorias.addEventListener('mousemove', function (e) {
+  if(!pressed) {
+    return
+  }
+
+  this.scrollLeft += startXX - e.clientX
+})
 /**********************************************************************************/
+
