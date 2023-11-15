@@ -179,11 +179,9 @@ header{
 .catalogo h1{
   margin-top: 50px;
   text-align: center;
-  padding: 10px;
-  font-size: 36px;
-  font-weight: bold;
-  color: white;
-  background-color: #0043ED;
+  font-size: 22px;
+  font-weight: 700;
+  color: rgb(48, 48, 48);
 }
 .wrapper{
   margin-top: 40px;
