@@ -96,7 +96,7 @@ Categorias.addEventListener('mouseleave', function (e) {
 
 window.addEventListener('mouseup', function (e) {
   pressed = false
-  wrapper.style.cursor = 'grab'
+  Categorias.style.cursor = 'grab'
 })
 
 Categorias.addEventListener('mousemove', function (e) {
