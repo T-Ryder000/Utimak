@@ -1,5 +1,26 @@
 'use strict'
 
+let search = document.querySelector('#pesquisar')
+let SearchText = document.querySelector('.none')
+
+
+search.addEventListener('click', function(){
+   let a = SearchText.className
+
+   if(a == 'none'){
+    SearchText.classList.add('search')
+    SearchText.classList.remove('none')
+   }
+   
+   if(a == 'search'){
+    SearchText.classList.add('none')
+    SearchText.classList.remove('search')
+   }
+})
+
+
+
+/***************************************************************/
 
 const wrapper = document.querySelector(".wrapper");
 const carousel = document.querySelector(".carousel");
