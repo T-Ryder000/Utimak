@@ -129,3 +129,16 @@ Categorias.addEventListener('mousemove', function (e) {
 })
 /**********************************************************************************/
 
+
+let slideWrapper = document.querySelector('.slide-wrapper')
+let slideList = document.querySelector('.slide-list')
+let slideItem = document.querySelectorAll('.slide-item')
+let previus = document.querySelector('.previus')
+let next = document.querySelector('.next')
+
+
+console.log(slideWrapper)
+console.log(slideList)
+console.log(slideItem)
+console.log(previus)
+console.log(next)

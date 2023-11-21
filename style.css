@@ -84,6 +84,7 @@ header{
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
+  transition: transform 0.1s linear;
 }
 .nav li:hover{
   transform: scale(1.1);
@@ -526,23 +527,7 @@ header{
 .next{
   right: 5px;
 }
-.slide-controls{
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 25px;
-}
-.buttons-controls{
-  border-radius: 50%;
-  background-color: rgb(255, 255, 255);
-  border: none;
-  width: 13px;
-  height: 13px;
-  cursor: pointer;
-}
-.buttons-controls.but1{
-  background-color: #0043ED;
-}
+
 @media screen and (max-width: 900px) {
   .slide-list{
     display: grid;
@@ -624,12 +609,20 @@ header{
   font-size: 20px;
   font-weight: 500;
   user-select: none;
+  padding: 10px;
+  transition: transform 0.1s linear;
 }
 .type-categ:hover{
   opacity: 0.8;
   transform: scale(1.1);
-  transition: 0.5s;
  }
+
+.type-categ li i{
+  font-size: 48px;
+  margin-right: 1em;
+}
+
+
 @media screen and (max-width: 600px){
 
   .nav-categoria{
@@ -643,6 +636,106 @@ header{
 }
 
 
+/***************************************************************************************************/
+.NEWSLETTER{
+  margin-top: 50px;
+  background-color: #0043ED;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(27, 27, 27);
+  padding: 20px;
+
+}
+
+.NEWSLETTER h1{
+  width: 40%;
+  color:white;
+}
+.NEW{
+  height: 90%;
+  background: linear-gradient( to top, gray, white 50%);
+  width: 50%;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.NEW img{
+  width: 30%;
+}
+
+
+.NEWFORM{
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+
+.NEWFORM1{
+  width: 50%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.NEWCONT{
+  padding: 5px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.NEWINPUT{
+  padding: 10px;
+  border-radius: 2px;
+  background-color: whitesmoke;
+  border: 1px solid gray;
+
+}
+.NEWTAGS{
+  font-weight: bold;
+}
+.NEWSEND{
+font-size: 42px;
+color: white;
+background-color: #0043ED;
+border-radius: 50%;
+padding: 3px;
+cursor:pointer;
+transform: translateY(-50%);
+transition: transform 0.1s linear;
+}
+.NEWSEND:active{
+  transform: translateY(-50%) scale(0.85);
+}
+
+@media screen and (max-width: 900px){
+
+  .NEWSLETTER h1{
+    font-size: 24px;
+  }
+
+}
+@media screen and (max-width: 600px){
+  .NEWSLETTER{
+    flex-direction: column;
+  }
+  .NEWSLETTER h1{
+    width: 100%;}
+  .NEW{
+    margin-top: 20px;
+    width: 100%; }
+  .NEWFORM1{
+    width: 80%;
+    padding: 10px 0;
+  }
+}
 
 
 /***********************************************************************************************/
