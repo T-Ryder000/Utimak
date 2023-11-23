@@ -136,9 +136,52 @@ let slideItem = document.querySelectorAll('.slide-item')
 let previus = document.querySelector('.previus')
 let next = document.querySelector('.next')
 
+const state = {
+    startingPoint: 0,
+    savePosition: 0,
+    currentPoint: 0,
+    movement: 0,
+    currentSlideIndex: 0
+}
 
-console.log(slideWrapper)
-console.log(slideList)
-console.log(slideItem)
-console.log(previus)
-console.log(next)
+
+function onMouseDown(event, index){
+    const item = event.currentTarget
+    state.startingPoint = event.clientX
+    state.currentPoint = state.startingPoint - state.savePosition
+    state.currentSlideIndex = index
+    console.log(state.currentSlideIndex)
+    item.addEventListener('mousemove', onMouseMove)
+}
+
+function onMouseMove(event){
+    state.movement = event.clientX - state.startingPoint
+    const position = event.clientX - state.currentPoint
+    // console.log('pixel', event.clientX, '-', 'partida', startingPoint, ' =' , movement)
+    slideList.style.transform ='translateX('+position+'px)'
+    state.savePosition = position
+}
+
+function onMouseUp(event){
+    const item = event.currentTarget
+    item.removeEventListener('mousemove', onMouseMove)
+}
+
+slideItem.forEach(function(item, index){
+    item.addEventListener('dragstart', function(event){
+        event.preventDefault()
+    })
+    item.addEventListener('mousedown', function(event){
+        onMouseDown(event, index)
+    })
+    item.addEventListener('mouseup', onMouseUp)
+
+})
+
+let cat = document.querySelectorAll('.type-categ')
+ console.log(cat)
+cat.forEach(function(item, index){
+    item.addEventListener('click' ,function(event){
+        event.preventDefault()
+    })
+})
