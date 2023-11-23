@@ -684,6 +684,7 @@ transform: translateY(-10%) scale(0.85);
 
   .nav-categoria{
     flex-wrap: nowrap;
+    padding-left: 10px;
   }
   .type-categ{
   scroll-snap-align: start;
