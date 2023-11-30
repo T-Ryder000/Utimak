@@ -142,6 +142,10 @@ header{
   .nav{
     display: none;
   }
+  #pesquisar{
+    font-size: 1.8rem;
+    margin-right: 10%;
+  }
 
   .nav-options{
     display: flex;
@@ -742,7 +746,7 @@ transform: translateY(-10%) scale(0.85);
   .type-categ{
   scroll-snap-align: start;
   aspect-ratio: 1/1;
-  min-width: calc(40% - .5rem);
+  min-width: calc(45% - .5rem);
   height: 6rem;
   }
   .type-categ:first-child{
