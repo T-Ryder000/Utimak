@@ -715,8 +715,13 @@ transform: translateY(-10%) scale(0.85);
   .nav-categoria{
     flex-wrap: nowrap;
   }
+
+  .type-categ li{
+    font-size: 80%;
+  }
   .type-categ li i{
     margin-right: 10px;
+    font-size: 40px;
   }
     .type-categ{
       width: 100%;
@@ -724,7 +729,7 @@ transform: translateY(-10%) scale(0.85);
       height: 8rem;
     }
     .type-categ:first-child{
-      margin-left: 150%;
+      margin-left: 160%;
       }
 }
 
@@ -737,11 +742,17 @@ transform: translateY(-10%) scale(0.85);
   .type-categ{
   scroll-snap-align: start;
   aspect-ratio: 1/1;
-  min-width: calc(60% - .5rem);
-  height: 5rem;
+  min-width: calc(40% - .5rem);
+  height: 6rem;
   }
   .type-categ:first-child{
-    margin-left: 450%;
+    margin-left: 240%;
+    }
+    .type-categ li i{
+      font-size: 36px;
+    }
+    .type-categ li{
+      font-size: 18px;
     }
 }
 
