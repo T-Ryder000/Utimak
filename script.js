@@ -19,6 +19,21 @@ search.addEventListener('click', function(){
 })
 
 
+let icon = document.querySelector('#opcoes')
+let dropOptions = document.querySelector('.options')
+
+icon.addEventListener('click', (e)=>{
+  let b = dropOptions.style.display
+
+  if(b == 'none'){
+    dropOptions.style.display = 'block'
+  }
+  else{
+    dropOptions.style.display = 'none'
+  }
+})
+
+
 
 /***************************************************************/
 

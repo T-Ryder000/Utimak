@@ -41,13 +41,13 @@ header{
   width: 70%;
   display: flex;
   justify-content: end;
+  align-items: center;
 }
 .header-seach{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
   height: 100%;
-
 }
 .search{
   padding: 15px;
@@ -89,7 +89,46 @@ header{
 .nav li:hover{
   transform: scale(1.1);
   transition:all 0.5s;
-  
+}
+
+.nav-options{
+  display: none;
+}
+.nav-options i{
+  font-size: 2rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.options{
+   position: absolute;
+   top: 4em;
+   width: 40%;
+   display: none;
+   cursor: pointer;
+   transition: 1s;
+   padding: 5px;
+   border-radius: 5px;
+   background-color: darkred;
+}
+.nav-options:hover .options{
+  display: block;
+}
+.options:hover .options{
+  display: block;
+} 
+.options li:hover{
+  background-color: #1842ff;
+}
+
+.options li{
+  overflow: hidden;
+  background-color:darkred;
+  color: white;
+  width: 100%;
+  padding: 0.5em;
+  text-align: center;
+  transition:0.1s;
 }
 
 @media screen and (max-width: 600px){
@@ -103,6 +142,12 @@ header{
   .nav{
     display: none;
   }
+
+  .nav-options{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
 }
 
 
@@ -113,6 +158,8 @@ header{
   height: 40vw;
   background-image: url(./Main/Main1/welcome.jpg);
   background-size: cover;
+  background-attachment: fixed;
+  transition: 1s;
 }
 
 .welcome{
