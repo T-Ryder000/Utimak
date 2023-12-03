@@ -6,4 +6,12 @@
 @import url('./css/slide-geral.css');
 @import url('./css/catalogo-principal.css');
 @import url('./css/local-do-email.css');
-@import url('./css/footer.css')
+@import url('./css/footer.css');
+
+@media screen and (max-width: 1024px) {
+  
+.cont-inical{
+  display: flex;
+  flex-direction:column-reverse
+}
+}
