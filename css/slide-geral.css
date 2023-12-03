@@ -1,0 +1,47 @@
+
+@keyframes animacao {
+  0% { margin-left: 0; }
+  20% { margin-left: 0; }
+  25% { margin-left: -100%; }
+  45% { margin-left: -100%; }
+  50% { margin-left: -200%; }
+  70% { margin-left: -200%; }
+  75% { margin-left: -300%; }
+  95% { margin-left: -300%; }
+  100% { margin-left: -400%; }
+}
+.slide-top{
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+}
+.slide-anuncios {
+  width: 900px;
+  height: 350px;
+  overflow: hidden;
+}
+.anuncios {
+  display: flex;
+  align-items: center;
+  height:100%;
+  width: 500%;
+  animation-name: animacao;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+.anuncios img {
+  height: 100%;
+  width: 20%;
+  object-fit: contain;
+  background-color: darkred;
+}
+@media screen and (max-width: 600px){
+  .slide-anuncios {
+    width: 95vw;
+    height: 45vw;}
+}

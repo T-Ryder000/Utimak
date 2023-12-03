@@ -1,0 +1,130 @@
+
+header{
+  display: flex;
+  background-color: white;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  box-shadow: 0px 1px 4px 0px rgba(82, 82, 82, 0.13);
+  border-bottom: 3px solid darkred;
+  width: 100%;
+  flex-wrap: wrap;
+  z-index: 999;
+}
+.logo{
+  width: 15%;
+  object-fit: cover;
+}
+.sub-header{
+  width: 70%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.header-seach{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  height: 100%;
+}
+.search{
+  padding: 10px;
+  width: 80%;
+  border-radius: 20px 0 0 20px;
+  /* background-color: #e9eaf0; */
+  font-weight: 600;
+  color: gray;
+}
+.none{
+  display: none;
+}
+#pesquisar{
+  text-align: center;
+  color: gray;
+  cursor: pointer;
+  width: 10%;
+  font-size: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 0 20px 20px 0;
+}
+.nav{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+}
+.nav li{
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.1s linear;
+}
+.nav li:hover{
+  transform: scale(1.1);
+  transition:all 0.5s;
+}
+.nav-options{
+  display: none;
+}
+.nav-options i{
+  font-size: 2rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.options{
+   position: absolute;
+   top: 4em;
+   width: 40%;
+   display: none;
+   cursor: pointer;
+   transition: 1s;
+   padding: 5px;
+   border-radius: 5px;
+   background-color: darkred;
+}
+.nav-options:hover .options{
+  display: block;
+}
+.options:hover .options{
+  display: block;
+} 
+.options li:hover{
+  background-color: #1842ff;
+}
+
+.options li{
+  overflow: hidden;
+  background-color:darkred;
+  color: white;
+  width: 100%;
+  padding: 0.5em;
+  text-align: center;
+  transition:0.1s;
+}
+
+@media screen and (max-width: 800px){
+  header{
+    flex-wrap: nowrap;
+    padding: 3%;
+  }
+  .logo{
+    width: 40%;
+  }
+  .nav{
+    display: none;
+  }
+  #pesquisar{
+    font-size: 1.5rem;
+    margin-right: 10%;
+  }
+
+  .nav-options{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+}

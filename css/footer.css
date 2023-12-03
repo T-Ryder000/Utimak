@@ -1,0 +1,70 @@
+.divisor{
+  margin-top: 70px;
+  height: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.divisor hr{
+  background-color: darkred;
+  height: 5px;
+  width: 90%;
+}
+footer{
+  font-weight: 500;
+  margin-top: 50px;
+  color: rgb(48, 48, 48);
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+footer a{
+  text-decoration: none;
+  color: rgb(48, 48, 48);
+}
+.sub-footer{
+  margin-top: 50px;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template: auto/ auto auto ;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+.logo-final{
+  width: 30%;
+}
+.redes a i{
+   font-size: 35px;
+   cursor: pointer;
+}
+.redes a i:hover{
+  transform: scale(1.1);
+}
+.Contato-local p{
+   padding: 10px 0;
+}
+.final-credits{
+  margin-top: 40px;
+  padding: 10px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 12px;
+  width: 100%;
+}
+
+
+
+@media screen and (max-width: 600px){
+  .sub-footer{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo-final{
+    width: 60%;
+  }
+}

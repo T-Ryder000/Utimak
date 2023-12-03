@@ -1,8 +1,8 @@
 'use strict'
 
+let bodyMain = document.querySelector('main')
 let search = document.querySelector('#pesquisar')
 let SearchText = document.querySelector('.none')
-
 
 search.addEventListener('click', function(){
    let a = SearchText.className
@@ -10,11 +10,8 @@ search.addEventListener('click', function(){
    if(a == 'none'){
     SearchText.classList.add('search')
     SearchText.classList.remove('none')
-   }
-   
-   if(a == 'search'){
-    SearchText.classList.add('none')
-    SearchText.classList.remove('search')
+    SearchText.style.width = '100%'
+    search.style.display = 'none'
    }
 })
 
@@ -32,6 +29,30 @@ icon.addEventListener('click', (e)=>{
     dropOptions.style.display = 'none'
   }
 })
+
+
+
+
+bodyMain.addEventListener('click', (e)=>{
+
+    let a = SearchText.className
+    let b = dropOptions.style.display
+
+    if(a == 'search'){
+    SearchText.classList.add('none')
+    SearchText.classList.remove('search')
+    search.style.display = 'block'
+   }
+
+   if(b == 'block'){
+    dropOptions.style.display = 'none'
+   }
+})
+
+
+
+
+
 
 
 
